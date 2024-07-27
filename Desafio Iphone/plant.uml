@@ -1,0 +1,29 @@
+@startuml
+
+interface MusicPlayer {
+    + playMusic()
+    + pauseMusic()
+    + skipTrack()
+}
+
+interface Telephone {
+    + makeCall(number: String)
+    + receiveCall()
+}
+
+interface InternetBrowser {
+    + openURL(url: String)
+    + closeURL()
+}
+
+class iPhone {
+    + musicPlayer: MusicPlayer
+    + telephone: Telephone
+    + browser: InternetBrowser
+}
+
+iPhone -- MusicPlayer
+iPhone -- Telephone
+iPhone -- InternetBrowser
+
+@enduml
